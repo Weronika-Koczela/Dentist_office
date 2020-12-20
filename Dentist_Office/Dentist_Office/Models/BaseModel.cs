@@ -12,14 +12,14 @@ namespace Dentist_Office.Models
         public event PropertyChangedEventHandler PropertyChanged;
 
 
-        private void RaisePropertyChanged(string property)
+
+        protected void OnPropertyChange(string propertyName)
         {
             if (PropertyChanged != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(property));
-
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
+    
     }
 }

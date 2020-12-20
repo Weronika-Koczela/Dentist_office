@@ -16,7 +16,7 @@ namespace Dentist_Office.Models
             set { _userId = value; }
         }
         private string _firstName;
-
+        
         public string FirstName
         {
             get { return _firstName; }
@@ -43,14 +43,6 @@ namespace Dentist_Office.Models
         {
             get { return _pesel; }
             set { _pesel = value; }
-        }
-
-        private DateTime dateOfBirth;
-
-        public DateTime DateOfBirth
-        {
-            get { return dateOfBirth; }
-            set { dateOfBirth = value; }
         }
 
 
