@@ -13,6 +13,7 @@ namespace Dentist_Office.ViewModels
 {
 	class RegistrationViewModel : BaseModel
 	{
+       
 		private UserModel user = new UserModel();
 
 		public string FirstName {
@@ -23,9 +24,11 @@ namespace Dentist_Office.ViewModels
 
 			set 
 			{
-				if (String.IsNullOrEmpty(user.FirstName))
+                
+                if (String.IsNullOrEmpty(user.FirstName))
 				{
-					MessageBox.Show($"{new UserEmptyFirstName()}","Błąd",MessageBoxButton.OK,MessageBoxImage.Information);
+                    MessageBox.Show("Sprawdza");
+                    MessageBox.Show($"{new UserEmptyFirstName()}","Błąd",MessageBoxButton.OK,MessageBoxImage.Information);
 
 				}
 				user.FirstName = value;
@@ -64,9 +67,16 @@ namespace Dentist_Office.ViewModels
 				} 
             } 
         }
+        public void imie(string imie, string nazwisko, string pesel)
+        {
+            user.FirstName = imie;
+            user.LastName = nazwisko;
+            user.PESEL = pesel;
+        }
+      
 
 
-	}
+    }
 
     /// <summary>
     /// Klasa statyczna PeselValidator.
@@ -117,5 +127,6 @@ namespace Dentist_Office.ViewModels
             return reszta == 0 ? reszta.ToString() : (10 - reszta).ToString();
         }
     }
+    
 } 
 
