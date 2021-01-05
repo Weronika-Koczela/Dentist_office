@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dentist_Office.Exceptions
 {
-	class UserEmptyFirstName : Exception
-	{
-		public UserEmptyFirstName() : base("Imię nie może być puste")
-		{
-			
-		}
-	}
+    class UserEmptyPassword : Exception
+    {
+        public UserEmptyPassword() : base("Hasło nie może być puste")
+        {
+
+        }
+    }
 }

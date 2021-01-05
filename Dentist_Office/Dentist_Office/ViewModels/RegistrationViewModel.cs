@@ -27,7 +27,6 @@ namespace Dentist_Office.ViewModels
                 
                 if (String.IsNullOrEmpty(user.FirstName))
 				{
-                    MessageBox.Show("Sprawdza");
                     MessageBox.Show($"{new UserEmptyFirstName()}","Błąd",MessageBoxButton.OK,MessageBoxImage.Information);
 
 				}

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dentist_Office.Exceptions
 {
-	class UserEmptyFirstName : Exception
-	{
-		public UserEmptyFirstName() : base("Imię nie może być puste")
-		{
-			
-		}
-	}
+    class UserEmptyPESEL : Exception
+    {
+        public UserEmptyPESEL() : base(" Pole pesel nie może być puste")
+        {
+
+        }
+    }
 }

@@ -57,11 +57,20 @@
     </ApplicationDefinition>
     <Compile Include="Exceptions\UserEmptyFirstName.cs" />
     <Compile Include="Exceptions\UserEmptyLastName.cs" />
+    <Compile Include="Exceptions\UserEmptyPassword.cs" />
+    <Compile Include="Exceptions\UserEmptyPESEL.cs" />
     <Compile Include="Exceptions\UserInvalidPESEL.cs" />
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registern.xaml.cs">
       <DependentUpon>Registern.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

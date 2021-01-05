@@ -15,3 +15,5 @@ C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Denti
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Dentist_Office.csproj.CoreCompileInputs.cache
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Dentist_Office.exe
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Dentist_Office.pdb
+C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Login.g.cs
+C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Login.baml
