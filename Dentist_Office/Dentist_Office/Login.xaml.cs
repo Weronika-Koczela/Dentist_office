@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace Dentist_Office
 {
@@ -24,6 +25,7 @@ namespace Dentist_Office
         {
             InitializeComponent();
         }
+      
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -39,10 +41,13 @@ namespace Dentist_Office
                 }
                 else
                 {
-                    MessageBox.Show("Trwa logowanie");
+                    db test = new db();
+                    string qwery = "SELECT * FROM uzytkownik WHERE PESEL ="+"'"+TextBoxLogin.Text+"'"+ " AND Haslo='"+TextBoxPassword.Password+"'";
+                    test.dbtry(qwery);
+                    
                 }
             }
-            //pozniej sie tu dopisze lub do tego utworzy sie klase ale trzeba najpierw podlaczyc z baza danych.
+           
         }
     }
 }
