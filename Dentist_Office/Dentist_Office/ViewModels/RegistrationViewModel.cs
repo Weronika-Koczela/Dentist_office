@@ -63,6 +63,7 @@ namespace Dentist_Office.ViewModels
 				if (PeselValidator.ValidatePesel(user.PESEL) == false)
 				{
                     MessageBox.Show($"{new UserInvalidPESEL()}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                    user.PESEL = null;
 				} 
             } 
         }

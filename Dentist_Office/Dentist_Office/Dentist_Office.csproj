@@ -102,6 +102,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="db.cs" />
+    <Compile Include="dbregister.cs" />
     <Compile Include="doctor.xaml.cs">
       <DependentUpon>doctor.xaml</DependentUpon>
     </Compile>

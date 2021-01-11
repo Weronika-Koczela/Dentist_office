@@ -36,8 +36,19 @@ namespace Dentist_Office
             reg.LastName = TextBoxLastName.Text;
             reg.Pesel = TextBoxIdNumber.Text;
             
+            
+            string query = $"INSERT INTO uzytkownik (ID_uzytkownika, Imie, Nazwisko, PESEL, Haslo, status) VALUES(NULL, '{reg.FirstName}', '{reg.LastName}', '{reg.Pesel}', '{TextBoxPassword.Password}', '1');";
+            dbregister test = new dbregister();
 
-
+           
+            if (reg.Pesel != null)
+            {
+                test.dbtry(query, reg.Pesel);
+            }
+            else
+            {
+                
+            }
 
 
         }

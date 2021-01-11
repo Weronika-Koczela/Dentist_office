@@ -6,16 +6,17 @@
         xmlns:local="clr-namespace:Dentist_Office"
         mc:Ignorable="d"
         Title="Registern" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Height="14" Margin="169,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80" Name="TextBoxName"/>
-        <TextBox HorizontalAlignment="Left" Height="14" Margin="169,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80" Name="TextBoxLastName"/>
-        <TextBox HorizontalAlignment="Left" Height="14" Margin="169,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80" Name="TextBoxIdNumber"/>
-        <PasswordBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="169,136,0,0" Width="80" Name="TextBoxPassword"/>
-        <TextBlock HorizontalAlignment="Left" Margin="100,82,0,0" TextWrapping="Wrap" Text="Imie" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="100,100,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="100,118,0,0" TextWrapping="Wrap" Text="Pesel" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="100,136,0,0" TextWrapping="Wrap" Text="Hasło" VerticalAlignment="Top"/>
-        <Button Content="Zarejestruj" HorizontalAlignment="Left" Margin="100,190,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+    <Grid Margin="237,45,210,15" Width="347" HorizontalAlignment="Center" VerticalAlignment="Center" Height="361" Background="#FFF1F1F1">
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="60,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="227" Name="TextBoxName"/>
+        <TextBox Height="20" Margin="60,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Name="TextBoxLastName" HorizontalAlignment="Left" Width="227"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="60,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="227" Name="TextBoxIdNumber"/>
+        <PasswordBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,236,0,0" Width="227" Name="TextBoxPassword" Height="20"/>
+        <Button Content="Zarejestruj" HorizontalAlignment="Left" Margin="60,278,0,0" VerticalAlignment="Top" Width="227" Click="Button_Click" Height="36" BorderBrush="#FF3771EE" Background="#FF4591FF" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,37,0,0" TextWrapping="Wrap" Text="Rejestracja" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Label Content="Imię" Margin="60,74,60,0" VerticalAlignment="Top" Foreground="#FFBFBFBF"/>
+        <Label Content="Nazwisko" Margin="60,120,60,0" VerticalAlignment="Top" Foreground="#FFBFBFBF"/>
+        <Label Content="PESEL" HorizontalAlignment="Left" Margin="60,166,0,0" VerticalAlignment="Top" Foreground="#FFBFBFBF" Height="24" Width="227"/>
+        <Label Content="Hasło" HorizontalAlignment="Left" Margin="60,210,0,0" VerticalAlignment="Top" Foreground="#FFBFBFBF" Width="227"/>
 
 
 
