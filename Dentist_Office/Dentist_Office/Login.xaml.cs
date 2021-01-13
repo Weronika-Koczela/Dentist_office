@@ -43,7 +43,12 @@ namespace Dentist_Office
                 {
                     db test = new db();
                     string qwery = "SELECT * FROM uzytkownik WHERE PESEL ="+"'"+TextBoxLogin.Text+"'"+ " AND Haslo='"+TextBoxPassword.Password+"'";
-                    test.dbtry(qwery);
+                   // test.dbtry(qwery);
+                    if(test.dbtry(qwery,TextBoxLogin.Text)==true)
+                    {
+                        Close();
+                    }
+                    
                     
                 }
             }

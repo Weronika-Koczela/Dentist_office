@@ -13,60 +13,77 @@ namespace Dentist_Office
 {
     public class db
     {
-       
-       
-
-        public void dbtry(string qw)
-        { 
-         try
-   {
+        public bool dbtry(string qw, string pesel)
+        {
+            try
+            {
                 string conqw = "datasource=127.0.0.1;port=3306;username=root;password=;database=dentysta;";
                 MySqlConnection Connection = new MySqlConnection(conqw);
                 Connection.Open();
                 MySqlCommand CommandSQL = Connection.CreateCommand();
                 CommandSQL.CommandText = qw;
-                MySqlDataReader Reader = CommandSQL.ExecuteReader();               
+                MySqlDataReader Reader = CommandSQL.ExecuteReader();
                 if (Reader.HasRows)
                 {
                     while (Reader.Read())
-                    {                       
-                        if(Reader ["status"].ToString()=="1")
+                    {
+                        if (Reader["status"].ToString() == "1")
                         {
-                            patient okno = new patient();
+                            patient okno = new patient(pesel);
                             okno.Show();
-                            Login test = new Login();
-                            test.Close();
+                            //Reader.Close();
+                            //Connection.Close();
+                            //return true;
+                            //Login test = new Login();
+                            //test.Close();
                         }
-                        else if(Reader["status"].ToString() == "2")
+                        else if (Reader["status"].ToString() == "2")
                         {
+                            
                             secretary okno = new secretary();
+                            //Reader.Close();
+                            //Connection.Close();
                             okno.Show();
+                           // return true;
                         }
                         else if (Reader["status"].ToString() == "3")
                         {
+                            //Reader.Close();
+                            //Connection.Close();
+                            
                             doctor okno = new doctor();
                             okno.Show();
+                            //return true;
                         }
                         else
                         {
-                            MessageBox.Show("zle");
+
                         }
+                        //Reader.Close();
+                        //Connection.Close();
                     }
+                    
+                    return true;
+
                 }
                 else
                 {
+                    Reader.Close();
+                    Connection.Close();
                     MessageBox.Show("Błędny login lub hasło");
+                    return false;
                 }
-                Reader.Close();
-                Connection.Close();                
+                
             }
 
-  catch (SqlException e)
-{
-    Console.WriteLine("Wystąpił nieoczekiwany błąd!");
-    Console.WriteLine(e.Message);
-    Console.ReadKey();
-}
-}
+            catch (SqlException e)
+            {
+                
+                MessageBox.Show("Wystąpił nieoczekiwany błąd!");
+                MessageBox.Show(e.Message);
+                return false;
+            }
+            
+        }
     }
 }

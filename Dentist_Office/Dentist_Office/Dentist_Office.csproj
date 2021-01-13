@@ -77,6 +77,7 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -103,6 +104,7 @@
     </ApplicationDefinition>
     <Compile Include="db.cs" />
     <Compile Include="dbregister.cs" />
+    <Compile Include="dbvisitstoday.cs" />
     <Compile Include="doctor.xaml.cs">
       <DependentUpon>doctor.xaml</DependentUpon>
     </Compile>
@@ -124,6 +126,9 @@
       <DependentUpon>secretary.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
+    <Compile Include="Visit.xaml.cs">
+      <DependentUpon>Visit.xaml</DependentUpon>
+    </Compile>
     <Page Include="doctor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,6 +158,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="secretary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Visit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,9 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

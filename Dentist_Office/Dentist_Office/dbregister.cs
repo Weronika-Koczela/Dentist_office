@@ -9,13 +9,14 @@ using System.Windows;
 using System.Windows.Data;
 using MySql.Data.MySqlClient;
 using Dentist_Office.Exceptions;
+using System.Threading;
 
 namespace Dentist_Office
 {
     class dbregister
     {
 
-        public void dbtry(string qw, string PESEL)
+        public bool dbtry(string qw, string PESEL)
         {
             try
             {
@@ -30,6 +31,8 @@ namespace Dentist_Office
                 if (Reader.HasRows)
                 {
                     MessageBox.Show($"{new UserInvalidPESEL()}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Connection.Close();
+                    return false;
                 }
                 else
                 {
@@ -80,16 +83,21 @@ namespace Dentist_Office
                     CommandSQL.CommandText = $"INSERT INTO karta_pacjenta (Id_karty, Id_uzebienie, Id_pacjenta, Id_lekarza) VALUES ('{maxidkarty + 1}', '{maxiduzebienie}', '{maxiduzytkownika}', '1');";
                     Reader = CommandSQL.ExecuteReader();
                     MessageBox.Show("Użytkownik został dodany do Bazy danych");
+                    Thread.Sleep(3000);
+                    Connection.Close();
+                    return true;
+                   
                 }
-                Connection.Close();
+                
             }
 
 
             catch (SqlException e)
             {
-                Console.WriteLine("Wystąpił nieoczekiwany błąd!");
-                Console.WriteLine(e.Message);
-                Console.ReadKey();
+               
+                MessageBox.Show("Wystąpił nieoczekiwany błąd!");
+                MessageBox.Show(e.Message);
+                return false;
             }
         }
 

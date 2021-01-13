@@ -43,7 +43,12 @@ namespace Dentist_Office
            
             if (reg.Pesel != null)
             {
-                test.dbtry(query, reg.Pesel);
+               if(test.dbtry(query, reg.Pesel)==true)
+                {
+                    Close();
+                }
+               
+               
             }
             else
             {
