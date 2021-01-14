@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:Dentist_Office"
         mc:Ignorable="d"
         Title="Timetable" Height="450" Width="923.034">
-    <Grid>
+    <Grid Background="#FFF1F1F1">
         <ListView Margin="10,10,9.6,77" Name="lvUsers" Loaded="Grid_Loaded" >
             <ListView.View>
                 <GridView>
-                    
+
                     <GridViewColumn Header="Data" Width="120" DisplayMemberBinding="{Binding Data}" />
                     <GridViewColumn Header="Goddzina" Width="50" DisplayMemberBinding="{Binding Godzina}" />
                     <GridViewColumn Header="Imie" Width="150" DisplayMemberBinding="{Binding Imie}" />
@@ -20,7 +20,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Potwierdź wizytę" HorizontalAlignment="Left" Margin="189,376,0,0" VerticalAlignment="Top" Width="115" Click="Potwierdz" Height="24"/>
-        <Button Content="Usuń wizytę" HorizontalAlignment="Left" Margin="363,376,0,0" VerticalAlignment="Top" Width="115" Click="Usun" Height="24"/>
+        <Button Content="Potwierdź wizytę" Margin="274,376,526,0" VerticalAlignment="Top" Click="Potwierdz" Height="24" BorderBrush="#FF4591FF" Background="#FF4591FF" Foreground="White"/>
+        <Button Content="Usuń wizytę" Margin="526,376,274,0" VerticalAlignment="Top" Click="Usun" Height="24" BorderBrush="#FF4591FF" Background="#FF4591FF" Foreground="White"/>
     </Grid>
 </Window>

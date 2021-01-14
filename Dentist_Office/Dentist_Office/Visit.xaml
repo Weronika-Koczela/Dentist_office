@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Dentist_Office"
         mc:Ignorable="d"
         Title="Visit" Height="450" Width="800">
-    <Grid>
-        <DatePicker HorizontalAlignment="Left" Margin="274,91,0,0" VerticalAlignment="Top" Height="85" Width="187" Name="kalendarz" IsTodayHighlighted="False" DisplayDateEnd="2021-04-30" DisplayDate="2021-02-01" DisplayDateStart="2021-02-01" Cursor="Pen">
+    <Grid Background="#FFF1F1F1">
+        <DatePicker Margin="297,95,296,0" VerticalAlignment="Top" Height="73" Name="kalendarz" IsTodayHighlighted="False" DisplayDateEnd="2021-04-30" DisplayDate="2021-02-01" DisplayDateStart="2021-02-01" Cursor="Pen">
             <DatePicker.BlackoutDates>
                 <CalendarDateRange End="02/07/2021 23:59:00" Start="2021-02-06"/>
                 <CalendarDateRange End="02/14/2021 23:59:00" Start="2021-02-13"/>
@@ -23,17 +23,17 @@
                 <CalendarDateRange End="04/25/2021 23:59:00" Start="2021-04-24"/>
             </DatePicker.BlackoutDates>
         </DatePicker>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="332,181,0,0" VerticalAlignment="Top" Width="75" Name="buttonkalendarz" Click="buttonkalendarz_Click"/>
-        <ListView HorizontalAlignment="Left" Height="100" Margin="278,231,0,0" VerticalAlignment="Top" Width="154" Name="lista"  >
+        <Button Content="Zatwierdź datę" Margin="334,187,334,0" VerticalAlignment="Top" Name="buttonkalendarz" Click="buttonkalendarz_Click" BorderBrush="#FF4591FF" Background="#FF4591FF" Foreground="White" Height="25"/>
+        <ListView Height="74" Margin="297,233,296,0" VerticalAlignment="Top" Name="lista"  Background="#FFF1F1F1">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="308,336,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="22" Margin="353,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="108" Name="login"/>
-        <TextBlock HorizontalAlignment="Left" Height="22" Margin="254,46,0,0" TextWrapping="Wrap" Text="Pesel pacjenta" VerticalAlignment="Top" Width="94"/>
+        <Button Content="Zatwierdź godzinę" Margin="334,337,334,0" VerticalAlignment="Top" Click="Button_Click" BorderBrush="#FF4591FF" Background="#FF4591FF" Foreground="White" Height="25"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="297,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="199" Name="login" Background="#FFF1F1F1"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="193,45,0,0" TextWrapping="Wrap" Text="Pesel pacjenta" VerticalAlignment="Top" Width="94" FontWeight="Bold" Background="{x:Null}" />
 
     </Grid>
 </Window>
