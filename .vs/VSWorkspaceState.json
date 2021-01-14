@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Dentist_Office",
+    "\\Dentist_Office\\Dentist_Office"
   ],
+  "SelectedNode": "\\Dentist_Office\\Dentist_Office.sln",
   "PreviewInSolutionExplorer": false
 }

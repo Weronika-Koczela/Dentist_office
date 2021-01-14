@@ -51,7 +51,7 @@ namespace Dentist_Office
                             //Reader.Close();
                             //Connection.Close();
                             
-                            doctor okno = new doctor();
+                            DentistWindow okno = new DentistWindow();
                             okno.Show();
                             //return true;
                         }

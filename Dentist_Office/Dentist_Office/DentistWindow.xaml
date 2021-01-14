@@ -1,25 +1,34 @@
 ﻿<Window x:Class="Dentist_Office.DentistWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Dentist_Office"
-        mc:Ignorable="d"
-        Title="DentistWindow" Height="450" Width="800">
-    <Grid Loaded="Grid_Loaded">
-        <DataGrid x:Name="gridDentist" HorizontalAlignment="Left" Height="305" Margin="300,60,0,0" VerticalAlignment="Top" Width="455" SelectionChanged="DataGrid_SelectionChanged"/>
-        <Label Content="Imię
-               " HorizontalAlignment="Left" Margin="35,60,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.18,0.188"/>
-        <Label Content="Nazwisko " HorizontalAlignment="Left" Margin="35,91,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.177,0.617"/>
-        <Label Content="PESEL
-               " HorizontalAlignment="Left" Margin="35,122,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.18,0.188"/>
-        <Label x:Name="setfname" Content="SetFirstName" HorizontalAlignment="Left" VerticalAlignment="Bottom" RenderTransformOrigin="1.302,1.562" Margin="157,0,0,334"/>
-        <Label x:Name="setname" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" RenderTransformOrigin="1.302,1.562" Margin="157,0,0,303"/>
-        <Label x:Name="setpesel" Content="SetPESEL" HorizontalAlignment="Left" VerticalAlignment="Bottom" RenderTransformOrigin="1.302,1.562" Margin="157,0,0,265"/>
-        <TextBox x:Name="Opis" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="202" Margin="35,180,0,0"/>
-        <Button x:Name="ZakończWizytę" Content="Zakończ wizytę
-                " HorizontalAlignment="Left" Margin="55,375,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" Height="45"/>
-        <ComboBox x:Name="chooseTeeth" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="55,298,0,0" Loaded="ComboBox_Loaded"/>
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:local="clr-namespace:Dentist_Office"
+mc:Ignorable="d"
+Title="DentistWindow" Height="450" Width="800">
+    <Grid>
+        <ListView HorizontalAlignment="Left" Height="140" Margin="409,60,0,0" VerticalAlignment="Top" Width="338" Name="userlist" Loaded="listloaded" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Imie" Width="100" DisplayMemberBinding="{Binding Imie}" />
+                    <GridViewColumn Header="Nazwisko" Width="100" DisplayMemberBinding="{Binding Nazwisko}" />
+                    <GridViewColumn Header="Pesel" Width="150" DisplayMemberBinding="{Binding Pesel}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="529,205,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Label Content="Imie" HorizontalAlignment="Left" Margin="70,77,0,0" VerticalAlignment="Top" Width="79"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="70,97,0,0" VerticalAlignment="Top" Width="79"/>
+        <Label Content="Pesel" HorizontalAlignment="Left" Margin="70,115,0,0" VerticalAlignment="Top" Width="79"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,77,0,0" VerticalAlignment="Top" Width="93" Name="getname"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,98,0,0" VerticalAlignment="Top" Width="93" Name="getsurname"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,120,0,0" VerticalAlignment="Top" Width="93" Name="getid"/>
+        <TextBox HorizontalAlignment="Left" Height="103" Margin="58,173,0,0" TextWrapping="Wrap" Text="Opis" VerticalAlignment="Top" Width="255" Name="description" />
+        <ComboBox HorizontalAlignment="Left" Margin="108,295,0,0" VerticalAlignment="Top" Width="120" Loaded="teethcombo" Name="listteeth" />
+        <Button Content="Zakończ wizytę" HorizontalAlignment="Left" Margin="393,330,0,0" VerticalAlignment="Top" Width="116" Click="Button_Click"/>
+
+
+
 
     </Grid>
 </Window>

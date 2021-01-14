@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\App.xaml
-81117847428
+9-703893134
 
-24284220201
+251366629131
 137-1646958353
-doctor.xaml;Login.xaml;MainWindow.xaml;patient.xaml;Registern.xaml;secretary.xaml;Timetable.xaml;Visit.xaml;
+DentistWindow.xaml;doctor.xaml;Login.xaml;MainWindow.xaml;patient.xaml;Registern.xaml;secretary.xaml;Timetable.xaml;Visit.xaml;
 
 True
 

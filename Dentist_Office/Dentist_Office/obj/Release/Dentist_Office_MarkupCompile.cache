@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Norbert\Source\Repos\Dentist_office\Dentist_Office\Dentist_Office\obj\Release\
+C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Release\
 Dentist_Office
 none
 false
 TRACE
-C:\Users\Norbert\Source\Repos\Dentist_office\Dentist_Office\Dentist_Office\App.xaml
-6218836313
+C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\App.xaml
+9-703893134
 
-19-138796954
-136316721478
-doctor.xaml;Login.xaml;MainWindow.xaml;patient.xaml;Registern.xaml;secretary.xaml;
+24-2085978798
+137-1646958353
+DentistWindow.xaml;doctor.xaml;Login.xaml;MainWindow.xaml;patient.xaml;Registern.xaml;secretary.xaml;Timetable.xaml;Visit.xaml;
 
 True
 

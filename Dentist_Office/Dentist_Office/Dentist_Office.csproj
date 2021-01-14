@@ -105,6 +105,9 @@
     <Compile Include="db.cs" />
     <Compile Include="dbregister.cs" />
     <Compile Include="dbvisitstoday.cs" />
+    <Compile Include="DentistWindow.xaml.cs">
+      <DependentUpon>DentistWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="doctor.xaml.cs">
       <DependentUpon>doctor.xaml</DependentUpon>
     </Compile>
@@ -132,6 +135,10 @@
     <Compile Include="Visit.xaml.cs">
       <DependentUpon>Visit.xaml</DependentUpon>
     </Compile>
+    <Page Include="DentistWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="doctor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
