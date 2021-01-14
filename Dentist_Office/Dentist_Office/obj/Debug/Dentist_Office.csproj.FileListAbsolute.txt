@@ -100,3 +100,5 @@ C:\Users\Norbert\Source\Repos\Dentist_office\Dentist_Office\Dentist_Office\obj\D
 C:\Users\Norbert\Source\Repos\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Dentist_Office.pdb
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Visit.g.cs
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Visit.baml
+C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Timetable.g.cs
+C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Timetable.baml

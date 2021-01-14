@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Dentist_Office"
         mc:Ignorable="d"
         Title="patient" Height="450" Width="800">
-    <Grid Loaded="Grid_Loaded">
-        <DatePicker HorizontalAlignment="Left" Margin="44,66,0,0" VerticalAlignment="Top" Height="85" Width="187" Name="kalendarz" IsTodayHighlighted="False" DisplayDateEnd="2021-04-30" DisplayDate="2021-02-01" DisplayDateStart="2021-02-01" Cursor="Pen">
+    <Grid Loaded="Grid_Loaded" Background="#FFF1F1F1">
+        <DatePicker HorizontalAlignment="Left" Margin="44,66,0,0" VerticalAlignment="Top" Height="85" Width="262" Name="kalendarz" IsTodayHighlighted="False" DisplayDateEnd="2021-04-30" DisplayDate="2021-02-01" DisplayDateStart="2021-02-01" Cursor="Pen">
             <DatePicker.BlackoutDates>
                 <CalendarDateRange End="02/07/2021 23:59:00" Start="2021-02-06"/>
                 <CalendarDateRange End="02/14/2021 23:59:00" Start="2021-02-13"/>
@@ -23,16 +23,18 @@
                 <CalendarDateRange End="04/25/2021 23:59:00" Start="2021-04-24"/>
             </DatePicker.BlackoutDates>
         </DatePicker>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="102,156,0,0" VerticalAlignment="Top" Width="75" Name="buttonkalendarz" Click="buttonkalendarz_Click"/>
-        <ListView HorizontalAlignment="Left" Height="100" Margin="45,214,0,0" VerticalAlignment="Top" Width="154" Name="lista"  >
+        <Button Content="Wybierz" HorizontalAlignment="Left" Margin="139,156,0,0" VerticalAlignment="Top" Width="75" Name="buttonkalendarz" Click="buttonkalendarz_Click" BorderBrush="#FF4591FF" Background="#FF4591FF" Foreground="White"/>
+        <ListView HorizontalAlignment="Left" Height="100" Margin="45,254,0,0" VerticalAlignment="Top" Width="261" Name="lista"  >
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="75,319,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Wybierz" HorizontalAlignment="Left" Margin="139,359,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" BorderBrush="#FF4591FF" Background="#FF4591FF" Foreground="White"/>
         <DataGrid HorizontalAlignment="Left" Height="359" Margin="506,51,0,0" VerticalAlignment="Top" Width="260" Name="NadchodzaceWizyty" />
-        <TextBlock HorizontalAlignment="Left" Margin="534,10,0,0" TextWrapping="Wrap" Text="&#x9;Nadchodzące wizyty" VerticalAlignment="Top" Height="41" Width="232"/>
+        <TextBlock HorizontalAlignment="Left" Margin="457,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="232"><Run FontWeight="Bold" Text="&#x9;Nadchodzące wizyty"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="44,38,0,0" TextWrapping="Wrap" Text="Wybierz datę wizyty" VerticalAlignment="Top" Width="170" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="45,226,0,0" TextWrapping="Wrap" Text="Wybierz godzinę wizyty" VerticalAlignment="Top" Width="170" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" />
     </Grid>
 </Window>

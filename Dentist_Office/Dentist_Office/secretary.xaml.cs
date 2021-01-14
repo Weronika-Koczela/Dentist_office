@@ -63,8 +63,8 @@ namespace Dentist_Office
                 AdapterSQL.Fill(dane);
                 DzisiejszeWizyty.ItemsSource = dane.DefaultView;
                 AdapterSQL.Update(dane);
-                
 
+                Connection.Close();
 
 
             }
@@ -81,6 +81,17 @@ namespace Dentist_Office
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
             VisitsToday();
+        }
+
+        //private void Button_Click_2(object sender, RoutedEventArgs e)
+        //{
+
+        //}
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Timetable t = new Timetable();
+            t.Show();
         }
     }
 }

@@ -125,6 +125,9 @@
     <Compile Include="secretary.xaml.cs">
       <DependentUpon>secretary.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Timetable.xaml.cs">
+      <DependentUpon>Timetable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
     <Compile Include="Visit.xaml.cs">
       <DependentUpon>Visit.xaml</DependentUpon>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="secretary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Timetable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
