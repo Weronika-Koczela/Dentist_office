@@ -96,7 +96,16 @@ namespace Dentist_Office
                 CommandSQL.CommandText = "Select max(ID_terminu) from kalendarz";//zapytanie do bazy
                 MySqlDataReader Reader = CommandSQL.ExecuteReader();
                 Reader.Read();
-                int maxidterminu = Reader.GetInt32(0);
+                int maxidterminu = 0;
+                if (Reader["max(ID_terminu)"] == DBNull.Value)
+                {
+
+                }
+                else
+                {
+                    maxidterminu = Reader.GetInt32(0);
+                }
+                
                 Reader.Close();
                 CommandSQL.CommandText = $"Select ID_uzytkownika from uzytkownik where PESEL = '{psl}' ";
                 Reader = CommandSQL.ExecuteReader();
@@ -106,7 +115,15 @@ namespace Dentist_Office
                 CommandSQL.CommandText = "Select max(ID_Wizyty) from wizyta";
                 Reader = CommandSQL.ExecuteReader();
                 Reader.Read();
-                int maxidwizyty = Reader.GetInt32(0);
+                int maxidwizyty = 0;
+                if (Reader["max(ID_Wizyty)"] == DBNull.Value)
+                {
+
+                }
+                else
+                {
+                   maxidwizyty = Reader.GetInt32(0);
+                }
                 Reader.Close();
                 CommandSQL.CommandText = "Select ID_uzytkownika from uzytkownik where status = '3'";
                 Reader = CommandSQL.ExecuteReader();
@@ -121,7 +138,7 @@ namespace Dentist_Office
                 CommandSQL.CommandText = $"INSERT INTO kalendarz (ID_terminu, Data, Godzina) VALUES ('{maxidterminu + 1}', '{kalendarz.SelectedDate.Value.ToString("yyyy-MM-dd")}', '{lista.SelectedItem}:00')";
                 Reader = CommandSQL.ExecuteReader();
                 Reader.Close();
-                CommandSQL.CommandText = $"INSERT INTO wizyta (ID_Wizyty, ID_lekarza, ID_terminu, ID_Pacjenta, ID_rejestratora, Status_wizyty) VALUES ('{maxidwizyty + 1}', '{idlekarza}', '{maxidterminu}', '{idpacjenta}', '{idrejestratora}', 'Niepotwierdzona')";
+                CommandSQL.CommandText = $"INSERT INTO wizyta (ID_Wizyty, ID_lekarza, ID_terminu, ID_Pacjenta, ID_rejestratora, Status_wizyty) VALUES ('{maxidwizyty + 1}', '{idlekarza}', '{maxidterminu+1}', '{idpacjenta}', '{idrejestratora}', 'Niepotwierdzona')";
                 Reader = CommandSQL.ExecuteReader();
                 MessageBox.Show("Wizyta została dodana");
                 sprawdzaniegodzin();
