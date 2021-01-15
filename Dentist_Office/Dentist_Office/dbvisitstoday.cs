@@ -41,11 +41,15 @@ namespace Dentist_Office
 
             }
 
-            catch (SqlException e)
+            catch (SqlException)
             {
 
-                MessageBox.Show("Wystąpił nieoczekiwany błąd!");
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Bład połączenia z bazą danych", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Wystąpił nieoczekiwany błąd", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
         }
