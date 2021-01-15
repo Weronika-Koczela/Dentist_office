@@ -7,7 +7,7 @@ xmlns:local="clr-namespace:Dentist_Office"
 mc:Ignorable="d"
 Title="DentistWindow" Height="450" Width="800">
     <Grid>
-        <ListView HorizontalAlignment="Left" Height="140" Margin="409,60,0,0" VerticalAlignment="Top" Width="338" Name="userlist" Loaded="listloaded" >
+        <ListView HorizontalAlignment="Left" Height="140" Margin="409,69,0,0" VerticalAlignment="Top" Width="338" Name="userlist" Loaded="listloaded" Background="#FFF1F1F1" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Imie" Width="100" DisplayMemberBinding="{Binding Imie}" />
@@ -16,18 +16,19 @@ Title="DentistWindow" Height="450" Width="800">
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="529,205,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Label Content="Imie" HorizontalAlignment="Left" Margin="70,77,0,0" VerticalAlignment="Top" Width="79"/>
-        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="70,97,0,0" VerticalAlignment="Top" Width="79"/>
-        <Label Content="Pesel" HorizontalAlignment="Left" Margin="70,115,0,0" VerticalAlignment="Top" Width="79"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,77,0,0" VerticalAlignment="Top" Width="93" Name="getname"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,98,0,0" VerticalAlignment="Top" Width="93" Name="getsurname"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,120,0,0" VerticalAlignment="Top" Width="93" Name="getid"/>
-        <TextBox HorizontalAlignment="Left" Height="103" Margin="48,286,0,0" TextWrapping="Wrap" Text="Opis" VerticalAlignment="Top" Width="255" Name="description" />
-        <ComboBox HorizontalAlignment="Left" Margin="173,187,0,0" VerticalAlignment="Top" Width="120" Loaded="teethcombo" Name="listteeth" />
-        <Button Content="Zakończ wizytę" HorizontalAlignment="Left" Margin="393,330,0,0" VerticalAlignment="Top" Width="116" Click="Button_Click"/>
-        <Label Content="Wybór zęba" HorizontalAlignment="Left" Margin="48,187,0,0" VerticalAlignment="Top" Width="101"/>
-        <Button Content="Zatwierdź ząb" HorizontalAlignment="Left" Margin="70,238,0,0" VerticalAlignment="Top" Width="154" Height="24" Click="Button_Click_2"/>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="526,219,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click_1" BorderBrush="#FF4591FF" Background="#FF4591FF" Foreground="White" Height="28" />
+        <Label Content="Imię" HorizontalAlignment="Left" Margin="89,66,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="89,97,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold"/>
+        <Label Content="Pesel" HorizontalAlignment="Left" Margin="89,128,0,0" VerticalAlignment="Top" Width="79" FontWeight="Bold"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,67,0,0" VerticalAlignment="Top" Width="93" Name="getname"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,98,0,0" VerticalAlignment="Top" Width="130" Name="getsurname"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,128,0,0" VerticalAlignment="Top" Width="130" Name="getid"/>
+        <TextBox HorizontalAlignment="Left" Height="103" Margin="89,287,0,0" TextWrapping="Wrap" Text="Tu wpisz opis" VerticalAlignment="Top" Width="255" Name="description" Background="#FFF1F1F1"/>
+        <ComboBox HorizontalAlignment="Left" Margin="173,187,0,0" VerticalAlignment="Top" Width="120" Loaded="teethcombo" Name="listteeth" Background="#FFF1F1F1"/>
+        <Button Content="Zakończ wizytę" HorizontalAlignment="Left" Margin="505,314,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click" BorderBrush="#FF4591FF" Background="#FF4591FF" Foreground="White" Height="45"/>
+        <Label Content="Wybór zęba" HorizontalAlignment="Left" Margin="67,183,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold"/>
+        <Button Content="Zatwierdź ząb" HorizontalAlignment="Left" Margin="112,238,0,0" VerticalAlignment="Top" Width="154" Height="24" Click="Button_Click_2" BorderBrush="#FF4591FF" Background="#FF4591FF" Foreground="White" />
+        <Label Content="Lista pacjentów" HorizontalAlignment="Left" Margin="409,29,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold"/>
 
 
 

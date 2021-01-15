@@ -52,9 +52,6 @@ namespace Dentist_Office
 
                 MySqlConnection Connection = new MySqlConnection(connection);
                 Connection.Open();
-                //MySqlCommand CommandSQL = Connection.CreateCommand();
-                //CommandSQL.CommandText = qw;//zapytanie do bazy
-                //MySqlDataReader Reader = CommandSQL.ExecuteReader();
 
                 MySqlDataAdapter AdapterSQL = new MySqlDataAdapter();
                 AdapterSQL.SelectCommand = new MySqlCommand(query, Connection);
@@ -69,12 +66,14 @@ namespace Dentist_Office
 
             }
 
-            catch (SqlException e)
+            catch (MySqlException)
             {
 
-                MessageBox.Show("Wystąpił nieoczekiwany błąd!");
-                MessageBox.Show(e.Message);
-                
+                MessageBox.Show("Bład połączenia z bazą danych", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Wystąpił nieoczekiwany błąd", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -83,10 +82,7 @@ namespace Dentist_Office
             VisitsToday();
         }
 
-        //private void Button_Click_2(object sender, RoutedEventArgs e)
-        //{
 
-        //}
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {

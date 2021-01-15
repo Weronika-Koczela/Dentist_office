@@ -108,9 +108,6 @@
     <Compile Include="DentistWindow.xaml.cs">
       <DependentUpon>DentistWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="doctor.xaml.cs">
-      <DependentUpon>doctor.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Exceptions\UserEmptyFirstName.cs" />
     <Compile Include="Exceptions\UserEmptyLastName.cs" />
     <Compile Include="Exceptions\UserEmptyPassword.cs" />
@@ -136,10 +133,6 @@
       <DependentUpon>Visit.xaml</DependentUpon>
     </Compile>
     <Page Include="DentistWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="doctor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
