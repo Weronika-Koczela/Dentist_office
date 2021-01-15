@@ -23,9 +23,11 @@ Title="DentistWindow" Height="450" Width="800">
         <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,77,0,0" VerticalAlignment="Top" Width="93" Name="getname"/>
         <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,98,0,0" VerticalAlignment="Top" Width="93" Name="getsurname"/>
         <Label Content="Label" HorizontalAlignment="Left" Height="26" Margin="173,120,0,0" VerticalAlignment="Top" Width="93" Name="getid"/>
-        <TextBox HorizontalAlignment="Left" Height="103" Margin="58,173,0,0" TextWrapping="Wrap" Text="Opis" VerticalAlignment="Top" Width="255" Name="description" />
-        <ComboBox HorizontalAlignment="Left" Margin="108,295,0,0" VerticalAlignment="Top" Width="120" Loaded="teethcombo" Name="listteeth" />
+        <TextBox HorizontalAlignment="Left" Height="103" Margin="48,286,0,0" TextWrapping="Wrap" Text="Opis" VerticalAlignment="Top" Width="255" Name="description" />
+        <ComboBox HorizontalAlignment="Left" Margin="173,187,0,0" VerticalAlignment="Top" Width="120" Loaded="teethcombo" Name="listteeth" />
         <Button Content="Zakończ wizytę" HorizontalAlignment="Left" Margin="393,330,0,0" VerticalAlignment="Top" Width="116" Click="Button_Click"/>
+        <Label Content="Wybór zęba" HorizontalAlignment="Left" Margin="48,187,0,0" VerticalAlignment="Top" Width="101"/>
+        <Button Content="Zatwierdź ząb" HorizontalAlignment="Left" Margin="70,238,0,0" VerticalAlignment="Top" Width="154" Height="24" Click="Button_Click_2"/>
 
 
 

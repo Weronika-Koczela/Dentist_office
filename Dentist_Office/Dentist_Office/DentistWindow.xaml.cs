@@ -97,24 +97,25 @@ namespace Dentist_Office
                
                 //userlist.ItemsSource = items;
                 Connection.Close();
-                showteeth();
+                //showteeth();
             }
         }
         List<int> teeth = new List<int>();
         void showteeth()
         {
            
-            for (int i = 0; i < 36; i++)
+            for (int i = 1; i <= 36; i++)
             {
+                
                 //teeth.Add(i + 1);
-                listteeth.Items.Add(i + 1);
+                listteeth.Items.Add(i);
             }
             //listteeth.ItemsSource = teeth;
         }
-        private void loadt(object sender, RoutedEventArgs e)
-        {
+        //private void loadt(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
 
         private void teethcombo(object sender, RoutedEventArgs e)
         {
@@ -144,6 +145,27 @@ namespace Dentist_Office
             else
             {
                 MessageBox.Show("Nie dziala");
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+           if(listteeth.SelectedItem != null && userlist.SelectedValue != null)
+            {
+                string connection = "datasource=127.0.0.1;port=3306;username=root;password=;database=dentysta;";//polaczenie z DB
+                MySqlConnection Connection = new MySqlConnection(connection);
+                Connection.Open();
+                MySqlCommand CommandSQL = Connection.CreateCommand();
+                CommandSQL.CommandText = $"SELECT Opis FROM zeby INNER JOIN lista_zebow ON lista_zebow.Id_zeba = zeby.ID_zeba Inner join karta_pacjenta on lista_zebow.Id_uzebienie = karta_pacjenta.Id_uzebienie INNER JOIN uzytkownik ON karta_pacjenta.Id_pacjenta = uzytkownik.ID_uzytkownika WHERE PESEL = '{userlist.SelectedItem.ToString()}' AND Oznaczenie = '{ listteeth.SelectedItem.ToString()}'";
+                MySqlDataReader Reader = CommandSQL.ExecuteReader();
+                Reader.Read();
+                description.Text = Reader.GetString(0);
+                Reader.Close();
+                Connection.Close();
+            }
+           else
+            {
+                MessageBox.Show("Nie wybrano pacjenta lub zęba");
             }
         }
     }
