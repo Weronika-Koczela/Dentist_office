@@ -177,14 +177,12 @@ namespace Dentist_Office
 
             }
 
-            catch (MySqlException)
+            catch (SqlException e)
             {
 
-                MessageBox.Show("Bład połączenia z bazą danych", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Wystąpił nieoczekiwany błąd", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Wystąpił nieoczekiwany błąd!");
+                MessageBox.Show(e.Message);
+
             }
         }
 

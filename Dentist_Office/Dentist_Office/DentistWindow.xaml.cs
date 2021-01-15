@@ -82,16 +82,22 @@ namespace Dentist_Office
                 CommandSQL.CommandText = $"SELECT Imie from uzytkownik where PESEL = '{userlist.SelectedItem.ToString()}' ";
                 MySqlDataReader Reader = CommandSQL.ExecuteReader();
                 Reader.Read();
-                getname.Content = Reader.GetString(0);               
+                getname.Content = Reader.GetString(0);
+               
                 Reader.Close();
                 CommandSQL.CommandText = $"SELECT Nazwisko from uzytkownik where PESEL = '{userlist.SelectedItem.ToString()}' ";
                 Reader = CommandSQL.ExecuteReader();
                 Reader.Read();
                 getsurname.Content = Reader.GetString(0);
-                Reader.Close();
-                getid.Content = userlist.SelectedItem.ToString();    
 
+                Reader.Close();
+
+                getid.Content = userlist.SelectedItem.ToString();
+
+               
+                //userlist.ItemsSource = items;
                 Connection.Close();
+                //showteeth();
             }
         }
         List<int> teeth = new List<int>();
@@ -100,51 +106,48 @@ namespace Dentist_Office
            
             for (int i = 1; i <= 36; i++)
             {
+                
+                //teeth.Add(i + 1);
                 listteeth.Items.Add(i);
             }
+            //listteeth.ItemsSource = teeth;
         }
+        //private void loadt(object sender, RoutedEventArgs e)
+        //{
+
+        //}
+
         private void teethcombo(object sender, RoutedEventArgs e)
         {
             showteeth();
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if(description.Text.Length>1 && listteeth.SelectedItem!=null)
             {
-                if (description.Text.Length > 1 && listteeth.SelectedItem != null)
-                {
-                    string connection = "datasource=127.0.0.1;port=3306;username=root;password=;database=dentysta;";
-                    MySqlConnection Connection = new MySqlConnection(connection);
-                    Connection.Open();
-                    MySqlCommand CommandSQL = Connection.CreateCommand();
-                    CommandSQL.CommandText = $"UPDATE zeby INNER JOIN lista_zebow ON lista_zebow.Id_zeba = zeby.ID_zeba Inner join karta_pacjenta on lista_zebow.Id_uzebienie = karta_pacjenta.Id_uzebienie INNER JOIN uzytkownik ON karta_pacjenta.Id_pacjenta = uzytkownik.ID_uzytkownika SET opis = '{description.Text}', Stan = 'zbadany' WHERE PESEL = '{userlist.SelectedItem.ToString()}' AND Oznaczenie = '{ listteeth.SelectedItem.ToString()}'";
-                    MySqlDataReader Reader = CommandSQL.ExecuteReader();
-                    MySqlCommand CommandDelVisit = Connection.CreateCommand();
+                string connection = "datasource=127.0.0.1;port=3306;username=root;password=;database=dentysta;";//polaczenie z DB
+                MySqlConnection Connection = new MySqlConnection(connection);
+                Connection.Open();
+                MySqlCommand CommandSQL = Connection.CreateCommand();
+                CommandSQL.CommandText = $"UPDATE zeby INNER JOIN lista_zebow ON lista_zebow.Id_zeba = zeby.ID_zeba Inner join karta_pacjenta on lista_zebow.Id_uzebienie = karta_pacjenta.Id_uzebienie INNER JOIN uzytkownik ON karta_pacjenta.Id_pacjenta = uzytkownik.ID_uzytkownika SET opis = '{description.Text}', Stan = 'zbadany' WHERE PESEL = '{userlist.SelectedItem.ToString()}' AND Oznaczenie = '{ listteeth.SelectedItem.ToString()}'";
+                MySqlDataReader Reader = CommandSQL.ExecuteReader();
+                
 
-                    Reader.Close();
+                Reader.Close();
 
-                    MessageBox.Show("Dodano opis");
+                MessageBox.Show("Dodano opis");
 
-                    Connection.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Sprawdź poprawność danych", "Wprowadzono niepoprawne dane", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
 
+                //userlist.ItemsSource = items;
+                Connection.Close();
             }
-            catch (ArgumentNullException)
+            else
             {
-
-                MessageBox.Show("Dane nie zostały poprawnie uzupełnione", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Nie dziala");
             }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Wystąpił nieoczekiwany bład", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-
         }
+
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
            if(listteeth.SelectedItem != null && userlist.SelectedValue != null)
@@ -155,11 +158,8 @@ namespace Dentist_Office
                 MySqlCommand CommandSQL = Connection.CreateCommand();
                 CommandSQL.CommandText = $"SELECT Opis FROM zeby INNER JOIN lista_zebow ON lista_zebow.Id_zeba = zeby.ID_zeba Inner join karta_pacjenta on lista_zebow.Id_uzebienie = karta_pacjenta.Id_uzebienie INNER JOIN uzytkownik ON karta_pacjenta.Id_pacjenta = uzytkownik.ID_uzytkownika WHERE PESEL = '{userlist.SelectedItem.ToString()}' AND Oznaczenie = '{ listteeth.SelectedItem.ToString()}'";
                 MySqlDataReader Reader = CommandSQL.ExecuteReader();
-
-                while (Reader.Read())
-                {
-                    description.Text = Reader.GetString(0);
-                }
+                Reader.Read();
+                description.Text = Reader.GetString(0);
                 Reader.Close();
                 Connection.Close();
             }

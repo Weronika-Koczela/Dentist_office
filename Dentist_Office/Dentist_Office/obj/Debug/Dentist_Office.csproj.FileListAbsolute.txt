@@ -17,8 +17,10 @@ C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Denti
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Dentist_Office.pdb
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Login.g.cs
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\Login.baml
+C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\doctor.g.cs
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\patient.g.cs
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\secretary.g.cs
+C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\doctor.baml
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\patient.baml
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\obj\Debug\secretary.baml
 C:\Users\pawel\Source\Repos\Weronika-Koczela\Dentist_office\Dentist_Office\Dentist_Office\bin\Debug\BouncyCastle.Crypto.dll

@@ -140,7 +140,7 @@ namespace Dentist_Office
                     CommandSQL.CommandText = $"INSERT INTO kalendarz (ID_terminu, Data, Godzina) VALUES ('{maxidterminu + 1}', '{kalendarz.SelectedDate.Value.ToString("yyyy-MM-dd")}', '{lista.SelectedItem}:00')";
                     Reader = CommandSQL.ExecuteReader();
                     Reader.Close();
-                    CommandSQL.CommandText = $"INSERT INTO wizyta (ID_Wizyty, ID_lekarza, ID_terminu, ID_Pacjenta, ID_rejestratora, Status_wizyty) VALUES ('{maxidwizyty + 1}', '{idlekarza}', '{maxidterminu+1}', '{idpacjenta}', '{idrejestratora}', 'Niepotwierdzona')";
+                    CommandSQL.CommandText = $"INSERT INTO wizyta (ID_Wizyty, ID_lekarza, ID_terminu, ID_Pacjenta, ID_rejestratora, Status_wizyty) VALUES ('{maxidwizyty + 1}', '{idlekarza}', '{maxidterminu}', '{idpacjenta}', '{idrejestratora}', 'Niepotwierdzona')";
                     Reader = CommandSQL.ExecuteReader();
                     MessageBox.Show("Wizyta została dodana");
                     Thread.Sleep(3000);
